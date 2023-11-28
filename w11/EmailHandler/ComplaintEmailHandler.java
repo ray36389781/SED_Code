@@ -1,6 +1,6 @@
 public class ComplaintEmailHandler implements EmailHandler {
     private EmailHandler nextHandler = new FanEmailHandler();
-    void handle (Email email) {
+    public void handle (Email email) {
         if (isSelf(email)) {
             System.out.println("Forward to legal department.");
         }
@@ -9,7 +9,7 @@ public class ComplaintEmailHandler implements EmailHandler {
         }
     }
 
-    private boolean isSelf (Email email) {
+    public boolean isSelf (Email email) {
         return email.type == "COMPLAINT";
     }
 
