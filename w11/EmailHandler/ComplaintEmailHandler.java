@@ -4,13 +4,13 @@ public class ComplaintEmailHandler implements EmailHandler {
         if (isSelf(email)) {
             System.out.println("Forward to legal department.");
         }
-        else {
+        else if (this.nextHandler!=null){
             nextHandler.handle(email);
         }
     }
 
     public boolean isSelf (Email email) {
-        return email.type == "COMPLAINT";
+        return email.type.equals("COMPLAINT");
     }
 
     public void setNextHandler(EmailHandler handler) {

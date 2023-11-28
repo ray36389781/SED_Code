@@ -4,13 +4,13 @@ public class SpamEmailHandler implements EmailHandler {
         if (isSelf(email)) {
             System.out.println("Put mail to the spam box.");
         }
-        else {
+        else if (this.nextHandler!=null){
             nextHandler.handle(email);
         }
     }
 
     public boolean isSelf (Email email) {
-        return email.type == "SPAM";
+        return email.type.equals("SPAM");
     }
 
     public void setNextHandler(EmailHandler handler) {

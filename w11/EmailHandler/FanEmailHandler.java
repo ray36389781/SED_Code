@@ -6,14 +6,14 @@ public class FanEmailHandler implements EmailHandler {
         if (isSelf(email)) {
             System.out.println("Forward to CEO.");
         }
-        else {
+        else if (this.nextHandler!=null){
             nextHandler.handle(email);
         }
     }
 
     @Override
     public boolean isSelf (Email email) {
-        return email.type == "FAN";
+        return email.type.equals("FAN");
     }
 
     @Override
