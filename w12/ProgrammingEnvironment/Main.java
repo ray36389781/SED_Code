@@ -1,6 +1,6 @@
 public class Main {
-    CompilerSubsystem compilerSubsystem = new CompilerSubsystem();
-	public static void main () {
-        this.compilerSubsystem.compile();
+    private static CompilerSubsystem compilerSubsystem = new CompilerSubsystem();
+	public static void main (String args[]) {
+        	compilerSubsystem.compile();
 	}
 }

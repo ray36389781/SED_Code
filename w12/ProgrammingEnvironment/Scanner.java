@@ -1,5 +1,5 @@
 public class Scanner {
     public void process() {
-        System.out.println("Scanning.....\n");
+        System.out.println("Scanning.....");
     }
 }
