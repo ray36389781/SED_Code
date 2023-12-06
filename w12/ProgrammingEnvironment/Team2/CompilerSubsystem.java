@@ -1,4 +1,4 @@
-public class CompilerSubsystem {
+public class CompilerSubsystem extends Subsystem {
     private Parser parser = new Parser();
     private Scanner scanner = new Scanner();
     private ProgramNode programNode = new ProgramNode();
