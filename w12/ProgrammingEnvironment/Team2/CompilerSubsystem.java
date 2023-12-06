@@ -3,7 +3,7 @@ public class CompilerSubsystem extends Subsystem {
     private Scanner scanner = new Scanner();
     private ProgramNode programNode = new ProgramNode();
     private BytecodeStream bytecodeStream = new BytecodeStream();
-    public void compile() {
+    public void process() {
         this.parser.process();
         this.scanner.process();
         this.programNode.process();
